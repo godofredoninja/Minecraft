@@ -100,7 +100,7 @@ gulp.task('compress', function() {
 
 
 // Servidor web en produccion
-gulp.task('produccion-server', function() {
+gulp.task('production-server', function() {
   connect.server({
   root: './dist',
   hostname: 'localhost',
@@ -132,6 +132,8 @@ gulp.task('copy', function() {
   gulp.src('./app/index.html')
   .pipe(useref())
   .pipe(gulp.dest('./dist'));
+  gulp.src('./app/img/**')
+  .pipe(gulp.dest('./dist/img'));
   gulp.src('./app/lib/fontawesome/fonts/**')
   .pipe(gulp.dest('./dist/fonts'));
 });
@@ -157,7 +159,7 @@ gulp.task('watch', function() {
 gulp.task('default', ['server', 'inject', 'wiredep', 'watch']);
 
 // para produccion
-gulp.task('produccion', ['compress', 'copy']);
+gulp.task('production', ['compress', 'copy']);
 
 // css compress
 gulp.task('csscompress', ['uncss']);
