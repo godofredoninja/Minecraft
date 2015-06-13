@@ -1,0 +1,11 @@
+{
+  "name": "FrontEnd-agil-godofredo",
+  "version": "0.0.1",
+  "description": "Realizar la parte del Frontend mas rapido",
+  "dependencies": {
+    "fontawesome": "~4.3.0",
+    "normalize.css": "~3.0.3",
+    "jquery": "~2.1.4",
+    "hammer.js": "~2.0.4"
+  }
+}
